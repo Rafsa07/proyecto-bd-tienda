@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4"><i class="bi bi-bar-chart-line"></i> Reporte de Ventas</h2>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card bg-dark border-primary mb-3">
+            <div class="card-header">Ganancias por Día</div>
+            <div class="card-body">
+                <table class="table table-dark table-striped">
+                    <thead><tr><th>Fecha</th><th>Ventas Realizadas</th><th>Ganancia Total</th></tr></thead>
+                    <tbody>
+                        {% for fila in diario %}
+                        <tr>
+                            <td>{{ fila[0] }}</td>
+                            <td>{{ fila[2] }}</td>
+                            <td class="text-success fw-bold">${{ fila[1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>Últimas transacciones</h3>
+<div class="table-responsive">
+    <table class="table table-dark table-sm table-hover">
+        <thead><tr><th>Producto</th><th>Cant.</th><th>Total</th><th>Hora</th></tr></thead>
+        <tbody>
+            {% for venta in detalle %}
+            <tr>
+                <td>{{ venta[1] }}</td>
+                <td>{{ venta[2] }}</td>
+                <td>${{ venta[3] }}</td>
+                <td>{{ venta[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

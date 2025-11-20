@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="px-4 py-5 my-5 text-center">
+    <i class="bi bi-shop display-1 text-primary"></i>
+    <h1 class="display-5 fw-bold text-white">Sistema de Gestión de Inventario</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4 text-secondary">Bienvenido al panel de control. Administra tus productos, controla el stock en tiempo real y registra ventas conectadas directamente a la nube.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/productos" class="btn btn-primary btn-lg px-4 gap-3">
+                <i class="bi bi-box-seam"></i> Ir al Inventario
+            </a>
+            <button type="button" class="btn btn-outline-light btn-lg px-4">Ver Reportes</button>
+        </div>
+    </div>
+</div>
+
+<div class="row text-center mt-5">
+    <div class="col-md-4">
+        <div class="card bg-dark border-secondary mb-3">
+            <div class="card-body">
+                <h3 class="text-success"><i class="bi bi-cloud-check"></i></h3>
+                <h5>Base de Datos</h5>
+                <p>Conectado a Supabase PostgreSQL</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-dark border-secondary mb-3">
+            <div class="card-body">
+                <h3 class="text-info"><i class="bi bi-code-slash"></i></h3>
+                <h5>Backend</h5>
+                <p>Desarrollado en Python Flask</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-dark border-secondary mb-3">
+            <div class="card-body">
+                <h3 class="text-warning"><i class="bi bi-server"></i></h3>
+                <h5>Hosting</h5>
+                <p>Desplegado en Render Cloud</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

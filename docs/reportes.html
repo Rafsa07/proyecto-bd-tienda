@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión - Reportes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #212529; color: #fff; }
+        .card-custom { transition: transform 0.2s; }
+        .card-custom:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,255,255,0.2); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-database-fill-gear"></i> Mi Sistema BD</a>
+            
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Inicio</a>
+                
+                <a class="nav-link" href="inventario.html"><i class="bi bi-box-seam"></i> Inventario</a>
+                <a class="nav-link" href="proveedores.html"><i class="bi bi-truck"></i> Proveedores</a>
+                <a class="nav-link" href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
+                
+                <a class="nav-link active" href="reportes.html">Reportes</a> 
+                
+                <a class="nav-link text-danger" href="index.html" onclick="alert('Cerrando sesión...')"><i class="bi bi-box-arrow-right"></i> Salir</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="container">
+                            
+        <h2 class="mb-4"><i class="bi bi-bar-chart-line"></i> Reporte de Ventas</h2>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card bg-dark border-primary mb-3">
+                    <div class="card-header">Ganancias por Día</div>
+                    <div class="card-body">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Ventas Realizadas</th>
+                                    <th>Ganancia Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025-11-30</td>
+                                    <td>1</td>
+                                    <td class="text-success fw-bold">$100.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-11-20</td>
+                                    <td>3</td>
+                                    <td class="text-success fw-bold">$1185.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Últimas transacciones</h3>
+        <div class="table-responsive">
+            <table class="table table-dark table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cant.</th>
+                        <th>Total</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sabritas</td>
+                        <td>5.000</td>
+                        <td>$100.00</td>
+                        <td>2025-11-30 23:11:23</td>
+                    </tr>
+                    <tr>
+                        <td>Coca cola</td>
+                        <td>50.000</td>
+                        <td>$1000.00</td>
+                        <td>2025-11-20 09:32:54</td>
+                    </tr>
+                    <tr>
+                        <td>Guayaba</td>
+                        <td>5.000</td>
+                        <td>$125.00</td>
+                        <td>2025-11-20 09:22:28</td>
+                    </tr>
+                    <tr>
+                        <td>Sabritas</td>
+                        <td>3.000</td>
+                        <td>$60.00</td>
+                        <td>2025-11-20 09:21:55</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <footer class="text-center text-muted mt-5 py-3">
+        <small>&copy; 2025 Proyecto Bases de Datos</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -56,15 +56,18 @@ El proyecto cuenta con una arquitectura de despliegue continuo (CI/CD):
 
 ### 1. Panel de Control de Inventario
 *Visualización en tiempo real del stock, con alertas visuales y opciones CRUD.*
-[INSERTAR IMAGEN DEL INVENTARIO AQUI]
+<img width="1627" height="699" alt="image" src="https://github.com/user-attachments/assets/82c33854-1494-493b-8a1e-64dcb1a58ac7" />
+
 
 ### 2. Módulo de Ventas
 *Interfaz optimizada para el cobro rápido, permitiendo selección de clientes y cálculo automático de totales.*
-[INSERTAR IMAGEN DE VENTAS/MODAL AQUI]
+<img width="1622" height="747" alt="image" src="https://github.com/user-attachments/assets/d322eec1-5d22-44b1-b505-5a29e33ddbdb" />
+
 
 ### 3. Seguridad y Acceso
 *Sistema de Login protegido contra inyecciones SQL y ataques de fuerza bruta básicos.*
-[INSERTAR IMAGEN DEL LOGIN AQUI]
+<img width="464" height="330" alt="image" src="https://github.com/user-attachments/assets/e734fb0e-64c0-4975-85a3-4fa952ba0ac3" />
+
 
 ---
 
@@ -73,25 +76,9 @@ El proyecto cuenta con una arquitectura de despliegue continuo (CI/CD):
 El diseño de la base de datos sigue las reglas de **Normalización (3NF)** para evitar redundancia de datos.
 
 ### Diagrama Relacional (Esquema)
-* **Usuarios:** Administradores del sistema.
-* **Inventario:** Tabla pivote que gestiona el stock físico.
-* **Historial_Ventas:** Tabla inmutable para auditoría financiera.
+<img width="1228" height="925" alt="image" src="https://github.com/user-attachments/assets/53a39b43-63a6-4f78-9f29-b2df5911e097" />
 
-```mermaid
-erDiagram
-    USUARIOS ||--|{ INVENTARIO : Gestiona
-    PRODUCTOS ||--|| INVENTARIO : "Tiene un"
-    PRODUCTOS ||--o{ HISTORIAL_VENTAS : "Genera"
-    
-    PRODUCTOS {
-        int id_producto PK
-        string nombre
-        numeric precio
-        string tipo_unidad "Kilo/Pieza"
-    }
+### Diagrama Entidad - Relacion Extendido
+<img width="1133" height="699" alt="image" src="https://github.com/user-attachments/assets/8c9cff57-b880-4b21-bf47-f8424ce6548f" />
 
-    INVENTARIO {
-        int id_inventario PK
-        numeric stock_actual
-        date ultima_actualizacion
-    }
+
